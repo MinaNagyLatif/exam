@@ -1,3 +1,4 @@
+
 *
 {
 	padding:0;
@@ -34,6 +35,8 @@ i
 {
 	transform: translateX(100%) !important;
 }
+/*   /globale style*/
+
 .strip-header-nav 
 {
 	position: fixed;
@@ -354,7 +357,7 @@ i
 .form-control
 {
 	background-color: transparent;
-	border: none;
+	border:a none;
 	border-bottom: 1px solid rgba(255,255,255,.7);
 	border-radius: 0;
 	color: #fff;
