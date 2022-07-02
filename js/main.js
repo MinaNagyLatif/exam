@@ -95,7 +95,7 @@ function getMovies() {
   e.open("get", URL),
     e.send(),
     (e.onreadystatechange = function () {
-        e.readyState ==4  && e.status == 200
+      4 == e.readyState && 200 == e.status
         ? ((allMovies = (allMovies = JSON.parse(e.response)).results),
           displayMovies())
         : console.log("error");
@@ -123,7 +123,7 @@ var imgPath = "https://image.tmdb.org/t/p/w500";
 function displayMovies() {
   for (var e = "", a = 0; a < allMovies.length; a++)
     e +=
-      '<div class="col-md-6 col-lg-4 my-3">\n            <div class="movie shadow rounded position-relative">\n                    <div class="post">\n                    <img src=' +
+      '<div class="col-md-6 col-lg-4 my-3 myM  shadow">\n            <div class="movie shadow rounded position-relative">\n                    <div class="post">\n                    <img src=' +
       imgPath +
       allMovies[a].poster_path +
       ' class="img-fluid rounded"/>\n                    <div class="layer d-flex align-items-center ">\n                    <div class="info p-0">\n                   \n                        <h2>' +
@@ -158,17 +158,17 @@ search_bar.onkeyup = function () {
         "</p>\n                        \n                    </div>\n                    </div>\n                    </div>\n                    </div>\n                </div>"),
       (result.innerHTML = a));
 };
-let userName = document.getElementById("name");
-  userEmail = document.getElementById("email");
-  userPhone = document.getElementById("phone");
-  userAge = document.getElementById("age");
-  userPassword = document.getElementById("password");
-  userRePassword = document.getElementById("rePassword");
-  userNameAlert = document.getElementById("namealert");
-  userEmailAlert = document.getElementById("emailalert");
-  userPhoneAlert = document.getElementById("phonealert");
-  userAgeAlert = document.getElementById("agealert");
-  userpasswordAlert = document.getElementById("passwordalert");
+let userName = document.getElementById("name"),
+  userEmail = document.getElementById("email"),
+  userPhone = document.getElementById("phone"),
+  userAge = document.getElementById("age"),
+  userPassword = document.getElementById("password"),
+  userRePassword = document.getElementById("rePassword"),
+  userNameAlert = document.getElementById("namealert"),
+  userEmailAlert = document.getElementById("emailalert"),
+  userPhoneAlert = document.getElementById("phonealert"),
+  userAgeAlert = document.getElementById("agealert"),
+  userpasswordAlert = document.getElementById("passwordalert"),
   userRepasswordAlert = document.getElementById("repasswordalert");
 function userNameValid() {
   return 1 == /^[a-zA-Z0-9]+$/.test(userName.value)
